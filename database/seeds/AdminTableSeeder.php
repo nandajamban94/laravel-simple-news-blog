@@ -24,6 +24,8 @@ class AdminTableSeeder extends Seeder
             'password' => bcrypt('password'),
         ]);*/
 
+     
+
          
     }
 }

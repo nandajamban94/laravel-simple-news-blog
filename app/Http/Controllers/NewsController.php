@@ -45,5 +45,7 @@ class NewsController extends Controller
    		News::find($id)->delete();
    		return redirect()->route('admin.profile');
    	}
+
+   	
    
 }

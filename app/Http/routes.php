@@ -31,34 +31,83 @@ Route::group(['middleware'=>'guest'],function(){
 });
 
 Route::group(['middleware'=>'auth'],function(){
+
 	Route::get('/profile',[
 			'uses'=> 'UserController@getProfile',
 			'as'=> 'admin.profile'
 		]);
 
-Route::get('/logout',[
-			'uses'=> 'UserController@getLogout',
-			'as'=> 'admin.logout'
+	Route::get('/logout',[
+				'uses'=> 'UserController@getLogout',
+				'as'=> 'admin.logout'
+			]);
+
+	Route::get('/logout',[
+				'uses'=> 'UserController@getLogout',
+				'as'=> 'admin.logout'
+			]);
+
+	Route::get('/create',[
+				'uses'=> 'NewsController@getCreate',
+				'as' => 'admin.create'
+			]);
+
+	Route::post('/create',[
+				'uses'=>'NewsController@postCreate',
+				'as'=> 'admin.create'
+			]);
+
+	Route::resource('news','NewsController');
+
+	Route::get('/panelagenda',[
+				'uses'=>'AgendaController@getAgendaPage',
+				'as'=> 'admin.agenda'
+			]);
+
+	Route::get('/createagenda',[
+				'uses'=>'AgendaController@getCreateAgendaPage',
+				'as'=> 'admin.createagenda'
+			]);
+
+	Route::post('/createagenda',[
+				'uses'=> 'AgendaController@postCreateAgendaPage',
+				'as' => 'admin.createagenda'
+			]);
+
+
+	Route::resource('agendas','AgendaController');
+
+	Route::get('/uploadfile',[ //ke halaman upload
+			'uses'=>'UploadFileController@getIndex',
+			'as'=>'admin.uplaodfile'
 		]);
 
-Route::get('/logout',[
-			'uses'=> 'UserController@getLogout',
-			'as'=> 'admin.logout'
-		]);
+	Route::post('store','UploadFileController@store'); //untuk upload 
 
-Route::get('/create',[
-			'uses'=> 'NewsController@getCreate',
-			'as' => 'admin.create'
-		]);
+	Route::get('showfile','UploadFileController@showall');
 
-Route::post('/create',[
-			'uses'=>'NewsController@postCreate',
-			'as'=> 'admin.create'
-		]);
-
-Route::resource('news','NewsController');
-
-
+	Route::resource('files','UploadFileController');
 });
 
+Route::get('/portalagenda',[
+		'uses'=> 'AnotherAgendaController@getIndex',
+		'as'=> 'portal.portalagenda'
+
+]);
+
+Route::get('/produkhukum',[
+		'uses'=> 'AnotherFileController@getIndex',
+		'as'=> 'portal.produkhukum'
+
+]);
+
+Route::get('/agenda',[
+	'uses'=> 'AnotherAgendaController@showAgenda',
+	 'as'=> 'agenda.simplified'
+]);
+
+
+Route::resource('publicportalagenda','AnotherAgendaController');
+
 Route::resource('newspage','AnotherNewsController');
+

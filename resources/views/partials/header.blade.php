@@ -10,8 +10,10 @@
     <a class="navbar-brand" href="{{route('home.index')}}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Beranda</a>
    <a class="navbar-brand" href="#">DPRD</a>
    <a class="navbar-brand" href="#">Sekretariat</a>
-   <a class="navbar-brand" href="#">Agenda</a>
-   <a class="navbar-brand" href="#">Produk Hukum</a>
+   <a class="navbar-brand" href="{{route('agenda.simplified')}}" data-toggle="tooltip" data-placement="bottom" title="Klik untuk melihat daftar keseluruhan agenda">Agenda</a>
+   <a class="navbar-brand" href="{{route('portal.produkhukum')}}">Produk Hukum</a>
+     
+
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -20,8 +22,18 @@
     <ul class="nav navbar-nav navbar-right">
 
         @if(Auth::check()) 
-        <li><a href="{{route('admin.profile')}}"><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{ Auth::user()->name }} Profile </a></li>
+      
+        <li><a><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{ Auth::user()->name }} </a></li>
         <li><a href="{{route('admin.logout')}}"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Panel Admin <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{route('admin.profile')}}"> Panel Berita </a></li>
+            <li><a href="{{route('admin.agenda')}}"> Panel Agenda</a></li>
+            <li><a href="{{url('/showfile')}}"> Upload File</a></li>
+          </ul>
+        </li>
+
         @else
         <li><a href="{{route('admin.signin')}}"><i class="fa fa-sign-in" aria-hidden="true"></i> Admin Sign in</a></li>
        @endif
