@@ -3,9 +3,7 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-<div class="page-header">
-  <h1>Example page header <small>Subtext for header</small></h1>
-</div>
+
 
 <div class="row">
   <div class="col-md-12" >
@@ -56,6 +54,14 @@
 	<div class="row">
 		
 	</div>
+	<hr>
+	<div class="well well-lg">
+		<h3><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i> facebok</a>
+		    <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i>  Twitter</a>
+		</h3>
+		
+	</div>
+
 	<hr>
 	<div class="page-header">
   		<h3>Kumpulan Artikel</h3>

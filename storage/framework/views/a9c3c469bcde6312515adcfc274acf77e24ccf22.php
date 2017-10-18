@@ -3,7 +3,8 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-
+<a href="<?php echo e(route('admin.profile')); ?>" class="btn btn-primary"><i class="fa fa-undo" aria-hidden="true"></i> Kembali ke Panel Berita</a>
+<hr>
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Sunting Berita</h3>

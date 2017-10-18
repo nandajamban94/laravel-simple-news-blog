@@ -12,7 +12,6 @@
    <a class="navbar-brand" href="#">Sekretariat</a>
    <a class="navbar-brand" href="{{route('agenda.simplified')}}" data-toggle="tooltip" data-placement="bottom" title="Klik untuk melihat daftar keseluruhan agenda">Agenda</a>
    <a class="navbar-brand" href="{{route('portal.produkhukum')}}">Produk Hukum</a>
-     
 
   </div>
 
@@ -29,7 +28,9 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Panel Admin <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="{{route('admin.profile')}}"> Panel Berita </a></li>
+
             <li><a href="{{route('admin.agenda')}}"> Panel Agenda</a></li>
+            
             <li><a href="{{url('/showfile')}}"> Upload File</a></li>
           </ul>
         </li>

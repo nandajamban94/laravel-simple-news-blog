@@ -12,7 +12,6 @@
    <a class="navbar-brand" href="#">Sekretariat</a>
    <a class="navbar-brand" href="<?php echo e(route('agenda.simplified')); ?>" data-toggle="tooltip" data-placement="bottom" title="Klik untuk melihat daftar keseluruhan agenda">Agenda</a>
    <a class="navbar-brand" href="<?php echo e(route('portal.produkhukum')); ?>">Produk Hukum</a>
-     
 
   </div>
 
@@ -29,7 +28,9 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Panel Admin <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="<?php echo e(route('admin.profile')); ?>"> Panel Berita </a></li>
+
             <li><a href="<?php echo e(route('admin.agenda')); ?>"> Panel Agenda</a></li>
+            
             <li><a href="<?php echo e(url('/showfile')); ?>"> Upload File</a></li>
           </ul>
         </li>

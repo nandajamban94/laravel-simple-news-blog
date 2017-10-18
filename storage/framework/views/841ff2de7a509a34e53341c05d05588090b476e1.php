@@ -4,7 +4,7 @@
 
 <?php $__env->startSection('content'); ?>
 <h2>Tulis Agenda Baru</h2>
-<a href="<?php echo e(route('admin.agenda')); ?>" class="btn btn-primary">Kembali ke Panel Agenda</a>
+<a href="<?php echo e(route('admin.agenda')); ?>" class="btn btn-primary"><i class="fa fa-undo" aria-hidden="true"></i> Kembali ke Panel Agenda</a>
 <hr>
 
 <div class="panel panel-default">

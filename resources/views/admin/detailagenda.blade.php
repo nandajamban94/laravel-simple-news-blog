@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+<a href="{{route('admin.agenda')}}" class="btn btn-primary">
+<i class="fa fa-undo" aria-hidden="true"></i> Kembali ke Panel Agenda</a>
+<hr>
    <div class="panel panel-default">
      <div class="panel-heading">
       <h3 class="panel-title">Lihat Detail isi Agenda</h3>
@@ -36,6 +39,6 @@
 		      		</tr>
 	      	</tbody>
 		</table>
-		<a href="{{route('admin.agenda')}}" class="btn btn-primary">Kembali ke Panel Agenda</a>
+		
     </div>
 @endsection
