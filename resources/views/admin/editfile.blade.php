@@ -6,7 +6,7 @@
 
 @section('content')
 
-<a href="{{url('/showfile')}}" class="btn btn-primary">Kembali ke Panel File</a>
+<a href="{{url('admin/showfile')}}" class="btn btn-primary">Kembali ke Panel File</a>
 <hr>
 
 <div class="panel panel-default">

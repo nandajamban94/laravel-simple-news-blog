@@ -34,7 +34,8 @@ Route::group(['middleware'=>'auth'],function(){
 
 	Route::get('/profile',[
 			'uses'=> 'UserController@getProfile',
-			'as'=> 'admin.profile'
+			'as'=> 'admin.profile',
+			'prefix'=>'admin'
 		]);
 
 	Route::get('/logout',[
@@ -49,29 +50,34 @@ Route::group(['middleware'=>'auth'],function(){
 
 	Route::get('/create',[
 				'uses'=> 'NewsController@getCreate',
-				'as' => 'admin.create'
+				'as' => 'admin.create',
+				'prefix'=>'admin'
 			]);
 
 	Route::post('/create',[
 				'uses'=>'NewsController@postCreate',
-				'as'=> 'admin.create'
+				'as'=> 'admin.create',
+				'prefix'=>'admin'
 			]);
 
 	Route::resource('news','NewsController');
 
 	Route::get('/panelagenda',[
 				'uses'=>'AgendaController@getAgendaPage',
-				'as'=> 'admin.agenda'
+				'as'=> 'admin.agenda',
+				'prefix'=>'admin'
 			]);
 
 	Route::get('/createagenda',[
 				'uses'=>'AgendaController@getCreateAgendaPage',
-				'as'=> 'admin.createagenda'
+				'as'=> 'admin.createagenda',
+				'prefix'=>'admin'
 			]);
 
 	Route::post('/createagenda',[
 				'uses'=> 'AgendaController@postCreateAgendaPage',
-				'as' => 'admin.createagenda'
+				'as' => 'admin.createagenda',
+				'prefix'=>'admin'
 			]);
 
 
@@ -79,12 +85,13 @@ Route::group(['middleware'=>'auth'],function(){
 
 	Route::get('/uploadfile',[ //ke halaman upload
 			'uses'=>'UploadFileController@getIndex',
-			'as'=>'admin.uplaodfile'
+			'as'=>'admin.uplaodfile',
+			'prefix'=>'admin'
 		]);
 
 	Route::post('store','UploadFileController@store'); //untuk upload 
 
-	Route::get('showfile','UploadFileController@showall');
+	Route::get('admin/showfile','UploadFileController@showall');
 
 	Route::resource('files','UploadFileController');
 });

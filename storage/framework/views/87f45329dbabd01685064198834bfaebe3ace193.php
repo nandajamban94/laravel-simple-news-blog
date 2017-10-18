@@ -4,7 +4,7 @@
 
 <?php $__env->startSection('content'); ?>
 
-<a href="<?php echo e(url('/showfile')); ?>" class="btn btn-primary">Kembali ke Panel File</a>
+<a href="<?php echo e(url('admin/showfile')); ?>" class="btn btn-primary">Kembali ke Panel File</a>
 <hr>
 <div class="panel panel-default">
   <div class="panel-heading">

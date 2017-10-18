@@ -31,7 +31,7 @@
 
             <li><a href="{{route('admin.agenda')}}"> Panel Agenda</a></li>
             
-            <li><a href="{{url('/showfile')}}"> Upload File</a></li>
+            <li><a href="{{url('admin/showfile')}}"> Upload File</a></li>
           </ul>
         </li>
 

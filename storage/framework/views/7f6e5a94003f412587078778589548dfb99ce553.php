@@ -31,7 +31,7 @@
 
             <li><a href="<?php echo e(route('admin.agenda')); ?>"> Panel Agenda</a></li>
             
-            <li><a href="<?php echo e(url('/showfile')); ?>"> Upload File</a></li>
+            <li><a href="<?php echo e(url('admin/showfile')); ?>"> Upload File</a></li>
           </ul>
         </li>
 

@@ -12,6 +12,13 @@ use App\News;
 class UserController extends Controller
 {
     public function getSignin(){
+      if (Auth::check()) {
+         return redirect()->route('home.index');
+         //untuk redirect admin apabila dia 
+         //coba2 aksesk sendiri halaman signin ,
+         //maka lgsg redirect ke halaman utama. 
+      }
+
     	return view('admin.signin');
     }
 
