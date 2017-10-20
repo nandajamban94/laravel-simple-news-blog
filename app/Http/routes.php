@@ -89,7 +89,7 @@ Route::group(['middleware'=>'auth'],function(){
 			'prefix'=>'admin'
 		]);
 
-	Route::post('store','UploadFileController@store'); //untuk upload 
+	Route::post('admin/store','UploadFileController@store'); //untuk upload 
 
 	Route::get('admin/showfile','UploadFileController@showall');
 

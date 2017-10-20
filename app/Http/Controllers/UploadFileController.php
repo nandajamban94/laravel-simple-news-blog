@@ -32,7 +32,7 @@ class UploadFileController extends Controller
      	}
 
      	$data->save();
-     	return redirect('showfile');
+     	return redirect('admin/showfile');
      }
 
      public function showall(){
@@ -59,6 +59,6 @@ class UploadFileController extends Controller
 
    		}
       $data->save();
-   		return redirect('showfile');
+   		return redirect('admin/showfile');
    	}
 }

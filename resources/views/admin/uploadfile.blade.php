@@ -25,10 +25,8 @@
          <label for="filepdf">File pdf</label>
          <input type="file" name="filepdf" >
        </div>
-
          <input type="hidden" name="_token" value="{{csrf_token()}}">
-         <input type="submit" class="btn btn-primary" name="submit" value="Submit">
-         
+         <input type="submit" class="btn btn-primary" name="submit" value="Submit"> 
       </form>
    </div>
   </div>

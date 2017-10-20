@@ -7,7 +7,7 @@
 @section('content')
 
 
-<div class="page-header">
+<div class="page-header new-post">
   <h2>Panel Berita</h2>
 </div>
 

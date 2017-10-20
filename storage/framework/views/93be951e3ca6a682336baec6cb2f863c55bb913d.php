@@ -24,6 +24,7 @@
     			<td><h4>judul file</h4></td>
     			<td><h4>Ukuran file</h4></td>
     			<td>Update File</td>
+                <td>Hapus File</td>
     		</tr>
     	</thead>
     	<tbody>
@@ -34,6 +35,7 @@
     			<td><?php echo e($file->title); ?></td>
     			<td><?php echo e($file->size); ?></td>
     			<td><a href="<?php echo e(url('files/'.$file->id.'/edit')); ?>" class="btn btn-primary">Edit</a></td>
+                <td><a href="#" class="btn btn-danger"> Hapus</a></td>
     		</tr>
     		<?php endforeach; ?>
     	</tbody>

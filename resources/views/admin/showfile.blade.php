@@ -26,6 +26,7 @@
     			<td><h4>judul file</h4></td>
     			<td><h4>Ukuran file</h4></td>
     			<td>Update File</td>
+                <td>Hapus File</td>
     		</tr>
     	</thead>
     	<tbody>
@@ -36,6 +37,7 @@
     			<td>{{$file->title}}</td>
     			<td>{{$file->size}}</td>
     			<td><a href="{{url('files/'.$file->id.'/edit')}}" class="btn btn-primary">Edit</a></td>
+                <td><a href="#" class="btn btn-danger"> Hapus</a></td>
     		</tr>
     		@endforeach
     	</tbody>
