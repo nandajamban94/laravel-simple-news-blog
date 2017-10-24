@@ -23,7 +23,7 @@ class AgendaController extends Controller
 
    public function postCreateAgendaPage(Request $request){
    		Agenda::create($request->all());
-   		return redirect()->route('admin.adminagenda');
+   		return redirect()->route('admin.agenda');
    }
 
    	public function show($id){
@@ -41,12 +41,12 @@ class AgendaController extends Controller
    	public function update(Request $request, $id){
    		//update ke database
    		Agenda::find($id)->update($request->all());
-   		return redirect()->route('admin.adminagenda');
+   		return redirect()->route('admin.agenda');
    	}
 
    	public function destroy($id){
    		Agenda::find($id)->delete();
-   		return redirect()->route('admin.adminagenda');
+   		return redirect()->route('admin.agenda');
    	}
 
  
