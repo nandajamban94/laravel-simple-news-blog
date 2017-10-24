@@ -26,4 +26,5 @@
 
 <?php echo $__env->yieldPushContent('scripts'); ?>
 </body>
+<?php echo $__env->make('partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 </html>

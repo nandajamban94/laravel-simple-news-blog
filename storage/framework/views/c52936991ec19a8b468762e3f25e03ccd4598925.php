@@ -19,20 +19,20 @@
 					  <!-- Wrapper for slides -->
 					  <div class="carousel-inner" role="listbox">
 					    <div class="item active">
-					      <img src="http://i64.tinypic.com/ja9hyw.jpg" >
+					      <img src="<?php echo e(asset ('foto/chicago.jpg')); ?>" >
 					      <div class="carousel-caption">
 					        Los angeles
 					      </div>
 					    </div>
 					    <div class="item">
-					      <img src="http://i67.tinypic.com/2vxr8zt.jpg" >
+					      <img src="<?php echo e(asset ('foto/la.jpg')); ?>" >
 					      <div class="carousel-caption">
 					        Chicago
 					      </div>
 					    </div>
 
 					     <div class="item">
-					      <img src="http://i63.tinypic.com/w8qqs9.jpg" >
+					      <img src="<?php echo e(asset ('foto/ny.jpg')); ?>" >
 					      <div class="carousel-caption">
 					        Sana andreas
 					      </div>

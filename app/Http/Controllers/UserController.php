@@ -45,7 +45,7 @@ class UserController extends Controller
    }
 
    public function getProfile(){ //ke halaman profile
-   	$data = News::all();
+    	$data = News::all();
       return view('admin.profile')->with('data',$data);
    }
 

@@ -118,3 +118,38 @@ Route::resource('publicportalagenda','AnotherAgendaController');
 
 Route::resource('newspage','AnotherNewsController');
 
+Route::get('dprd/pimpinan',[
+	'uses' => 'DprdController@getHalamanPimpinan',
+	'as' => 'dprd.pimpinan'
+]);
+
+Route::get ('dprd/komisi',[
+	'uses' => 'DprdController@getHalamanKomisi',
+	'as' => 'dprd.komisi'
+]);
+
+Route::get ('dprd/badan_musyawarah',[
+	'uses' => 'DprdController@getHalamanKomisiBadanMusyawarah',
+	'as' => 'dprd.badan_musyawarah'
+]);
+
+Route::get ('dprd/badan_anggaran',[
+	'uses' => 'DprdController@getHalamanBadanAnggaran',
+	'as' => 'dprd.badan_anggaran'
+]);
+
+Route::get ('dprd/badan_pembentukan_perda',[
+	'uses' => 'DprdController@getHalamanBadanPembentukanPerda',
+	'as' => 'dprd.badan_pembentukan_perda'
+]);
+
+Route::get ('dprd/badan_kehormatan',[
+	'uses' => 'DprdController@getBadanKehormatan',
+	'as' => 'dprd.badan_kehormatan'
+]);
+
+Route::get ('dprd/fraksi',[
+	'uses' => 'DprdController@getHalamanFraksi',
+	'as' => 'dprd.fraksi'
+]);
+

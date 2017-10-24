@@ -26,4 +26,5 @@
 
 @stack('scripts')
 </body>
+@include('partials.footer')
 </html>
