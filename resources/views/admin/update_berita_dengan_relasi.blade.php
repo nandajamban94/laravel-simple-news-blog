@@ -5,9 +5,16 @@
 @endsection
 
 @section('content')
-
+  @if(count($errors)>0)
+					<div class="alert alert-danger">
+						@foreach($errors->all() as $error)
+							<p>{{ $error }}</p>
+						@endforeach
+					</div>
+		@endif
 <div class="panel panel-default">
   <div class="panel-heading">Update Berita dengan relasi agenda</div>
+
   <div class="panel-body">
   	<form action="{{route('admin.updateberita_relasi')}}" method="post">
 		  <div class="form-group">

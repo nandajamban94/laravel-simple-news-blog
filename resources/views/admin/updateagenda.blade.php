@@ -8,14 +8,20 @@
 <h2>Tulis Agenda Baru</h2>
 <a href="{{route('admin.agenda')}}" class="btn btn-primary"><i class="fa fa-undo" aria-hidden="true"></i> Kembali ke Panel Agenda</a>
 <hr>
-
+ @if(count($errors)>0)
+					<div class="alert alert-danger">
+						@foreach($errors->all() as $error)
+							<p>{{ $error }}</p>
+						@endforeach
+					</div>
+		@endif
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Panel Sunting Agenda</h3>
   </div>
   <div class="panel-body">
 		<div class="col-md-12 ">
-			<form class="form-horizontal" action="{{url('agendas/'.$data->id)}}" method="post">
+			<form action="{{url('agendas/'.$data->id)}}" method="post">
 				<input type="hidden" name="_method" value="PUT">
 			  	{{ csrf_field() }}
 			  <div class="form-group">

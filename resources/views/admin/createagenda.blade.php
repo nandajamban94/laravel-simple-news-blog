@@ -7,14 +7,20 @@
 @section('content')
 <h2>Tulis Agenda Baru</h2>
 <hr>
-
+ @if(count($errors)>0)
+					<div class="alert alert-danger">
+						@foreach($errors->all() as $error)
+							<p>{{ $error }}</p>
+						@endforeach
+					</div>
+		@endif
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Panel tulis agenda baru</h3>
   </div>
   <div class="panel-body">
 		<div class="col-md-12 ">
-			<form class="form-horizontal" action="{{route('admin.createagenda')}}" method="post">
+			<form  action="{{route('admin.createagenda')}}" method="post">
 			  <div class="form-group">
 			    <label for="nama" class="col-md-2 control-label"><center>Nama Agenda</center></label>
 			    <div class="form-group">

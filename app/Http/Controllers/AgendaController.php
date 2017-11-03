@@ -22,6 +22,14 @@ class AgendaController extends Controller
    }
 
    public function postCreateAgendaPage(Request $request){
+        $this->validate($request, [
+            'nama'      => 'required',
+            'tanggal_pelaksanaan'  => 'required',
+            'waktu_pelaksanaan'   => 'required',
+            'tempat_pelaksanaan'  => 'required',
+            'status'          => 'required',
+            'pembahasan' => 'required'
+         ]);
    		Agenda::create($request->all());
    		return redirect()->route('admin.agenda');
    }
@@ -33,6 +41,7 @@ class AgendaController extends Controller
 
    	public function edit(Request $request,$id){
    		//mengarahkan ke halaman edit
+
    		$data= Agenda::find($id);
    		return view('admin.updateagenda')->with('data',$data);
    	}
@@ -40,6 +49,14 @@ class AgendaController extends Controller
 
    	public function update(Request $request, $id){
    		//update ke database
+           $this->validate($request, [
+            'nama'      => 'required',
+            'tanggal_pelaksanaan'  => 'required',
+            'waktu_pelaksanaan'   => 'required',
+            'tempat_pelaksanaan'  => 'required',
+            'status'          => 'required',
+            'pembahasan' => 'required'
+         ]);
    		Agenda::find($id)->update($request->all());
    		return redirect()->route('admin.agenda');
    	}

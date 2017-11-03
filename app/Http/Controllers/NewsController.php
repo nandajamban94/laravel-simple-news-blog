@@ -17,28 +17,64 @@ class NewsController extends Controller
     }
 
      public function getCreate(){
+
    		return view('admin.create');
    	}
 
    	public function postCreate(Request $request){
+         $this->validate($request, [
+            'judul'      => 'required',
+            'imagePath'  => 'required',
+            'sinopsis'   => 'required',
+            'deskripsi'  => 'required'
+         ]);
    		News::create($request->all());
    		return redirect()->route('admin.profile');
    	}
 
    	public function show($id){
    		$data = News::find($id);
-   		return view('admin.detail')->with('data',$data);
+      $id_agenda= $data->id_agenda;
+      $agenda = Agenda::find($id_agenda);
+      if ($id_agenda==0) {
+        # code...
+        $agenda=0;
+        $bool=0;
+        return view('admin.detail',['data' => $data, 'agenda' => $agenda, 'bool'=> $bool]); 
+      }
+      else{
+        $bool=1;
+         return view('admin.detail',['data' => $data, 'agenda' => $agenda, 'bool'=> $bool]); 
+      }
+     
    	}
 
    	public function edit(Request $request,$id){
    		//mengarahkan ke halaman edit
+      $agenda = Agenda::all();
    		$data= News::find($id);
-   		return view('admin.update')->with('data',$data);
+      if ($data->id_agenda==0) {
+        # code...
+        $agenda=0;
+        $bool=0;
+         return view('admin.update',['data' => $data, 'agenda' => $agenda, 'bool'=> $bool]); 
+      }
+      else{
+        $bool=1;
+   		 return view('admin.update',['data' => $data, 'agenda' => $agenda, 'bool'=> $bool]); 
+      }
    	}
 
    	public function update(Request $request, $id){
    		//update ke database
+     
    		News::find($id)->update($request->all());
+         $this->validate($request, [
+            'judul'      => 'required',
+            'imagePath'  => 'required',
+            'sinopsis'   => 'required',
+            'deskripsi'  => 'required'
+         ]);
    		return redirect()->route('admin.profile');
    	}
 

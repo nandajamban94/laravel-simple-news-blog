@@ -19,6 +19,7 @@
 	      		<td>Deskripsi</td>
 	      		<td>Sinopsis</td>
 	      		<td>ID berita</td>
+	      		<td>Agenda Terkait</td>
 	      		<td>gambar</td>
 	      	  </tr>
 	      	</thead>
@@ -30,6 +31,14 @@
 			      		<td><?php echo e($data->deskripsi); ?></td>
 			      		<td><?php echo e($data->sinopsis); ?></td>
 			      		<td><?php echo e($data->id); ?></td>
+			      		<td>
+			      			<?php if($bool==1): ?>
+			      			<?php echo e($agenda->nama); ?>
+
+			      			<?php else: ?>
+			      			Berita ini tidak ada relasi dengan Agenda
+			      			<?php endif; ?>
+			      		</td>
 			      		<td> <img class="media-object" src="<?php echo e($data->imagePath); ?>" style="max-height:100px;"></td>
 		      		</tr>
 	        	

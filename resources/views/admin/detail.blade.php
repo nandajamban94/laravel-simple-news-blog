@@ -21,6 +21,7 @@
 	      		<td>Deskripsi</td>
 	      		<td>Sinopsis</td>
 	      		<td>ID berita</td>
+	      		<td>Agenda Terkait</td>
 	      		<td>gambar</td>
 	      	  </tr>
 	      	</thead>
@@ -32,6 +33,13 @@
 			      		<td>{{$data->deskripsi}}</td>
 			      		<td>{{$data->sinopsis}}</td>
 			      		<td>{{$data->id}}</td>
+			      		<td>
+			      			@if($bool==1)
+			      			{{$agenda->nama}}
+			      			@else
+			      			Berita ini tidak ada relasi dengan Agenda
+			      			@endif
+			      		</td>
 			      		<td> <img class="media-object" src="{{$data->imagePath}}" style="max-height:100px;"></td>
 		      		</tr>
 	        	

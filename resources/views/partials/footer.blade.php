@@ -1,6 +1,7 @@
 <div id="footer">
 </br>
 </br>
+<hr>
   <div id="one"><h5 align="center">Copyright &copy; 2017 Kerja Praktek Manajemen Informatika Politeknik Negeri Sriwijaya</h5>
     <h6 align="center">Citra Fauziah &amp; Sri Wahyuni</h6>
     <!--p>Sekretariat DPRD Kab.Musi Banyuasin<br/>
