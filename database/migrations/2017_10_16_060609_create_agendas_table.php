@@ -21,6 +21,7 @@ class CreateAgendasTable extends Migration
             $table->string('tempat_pelaksanaan');
             $table->text('pembahasan');
             $table->string('status');
+          
         });
     }
 

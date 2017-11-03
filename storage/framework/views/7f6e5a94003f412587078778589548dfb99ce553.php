@@ -50,7 +50,7 @@
 
         <?php else: ?>
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="<?php echo e(route('admin.signin')); ?>"><i class="fa fa-sign-in" aria-hidden="true"></i><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="<?php echo e(route('admin.signin')); ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
        <?php endif; ?>
     </ul>

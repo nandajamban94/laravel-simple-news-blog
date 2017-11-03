@@ -17,7 +17,7 @@
       <h3 class="panel-title">Panel Admin</h3>
      </div>
     <div class="panel-body">
-    	<a  href="<?php echo e(route('admin.create')); ?>" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambah Berita</a>
+    	<a  href="<?php echo e(route('admin.update_tipe')); ?>" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambah Berita</a>
     	<hr>
       <table id="example" class="table table-hover">
 	      	<thead>

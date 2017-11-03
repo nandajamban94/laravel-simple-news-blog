@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\News;
 use Auth;
 use Session;
+use App\Agenda;
 class NewsController extends Controller
 {
     public function getIndex(){
@@ -46,6 +47,43 @@ class NewsController extends Controller
    		return redirect()->route('admin.profile');
    	}
 
+    public function getupdateTipe(){
+      return view('admin.update_tipeberita');
+    }
+
+    public function getUpdateBeritaRelasi(){
+      $agenda= Agenda::all();
+      return view('admin.update_berita_dengan_relasi')->with('agenda',$agenda);
+    }
+
+    public function postUpdateBeritaRelasi(Request $request){
+        $this->validate($request, [
+            'judul'      => 'required',
+            'imagePath'  => 'required',
+            'sinopsis'   => 'required',
+            'deskripsi'  => 'required'
+         ]);
+
+        $judul     = $request['judul'] ;
+        $imagePath = $request ['imagePath'];
+        $sinopsis  = $request ['sinopsis'];
+        $deskripsi = $request ['deskripsi'];
+
+        $nama   = $request->get('agenda');
+
+      
+        $berita = new News;
+
+        $berita->judul = $judul;
+        $berita->imagePath= $imagePath;
+        $berita->sinopsis = $sinopsis;
+        $berita->deskripsi = $deskripsi;
+        $berita->id_agenda = $nama;
+
+        $berita->save();
+        $data= News::all();
+       return redirect()->route('admin.profile');
+    }
    	
    
 }

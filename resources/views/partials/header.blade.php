@@ -50,7 +50,7 @@
 
         @else
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{route('admin.signin')}}"><i class="fa fa-sign-in" aria-hidden="true"></i><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="{{route('admin.signin')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
        @endif
     </ul>

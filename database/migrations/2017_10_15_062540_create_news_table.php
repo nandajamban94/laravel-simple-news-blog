@@ -19,6 +19,7 @@ class CreateNewsTable extends Migration
             $table->text('deskripsi');
             $table->string('imagePath');
             $table->text('sinopsis');
+            $table->integer('id_agenda');
         });
     }
 

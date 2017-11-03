@@ -28,7 +28,7 @@
 					      <img src="<?php echo e(asset ('foto/la.jpg')); ?>" >
 					      <div class="carousel-caption">
 					        Chicago
-					      </div>
+					      </div>	
 					    </div>
 
 					     <div class="item">

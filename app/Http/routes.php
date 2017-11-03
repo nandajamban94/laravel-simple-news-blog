@@ -94,6 +94,25 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('admin/showfile','UploadFileController@showall');
 
 	Route::resource('files','UploadFileController');
+
+	Route::get('/update_tipe_berita',[
+		'uses' => 'NewsController@getupdateTipe',
+		'as' => 'admin.update_tipe',
+		'prefix' =>'admin'
+	]);
+
+	Route::get('/update_tipe_berita/relasi',[
+		'uses' => 'NewsController@getUpdateBeritaRelasi',
+		'as' => 'admin.updateberita_relasi',
+		'prefix'=> 'admin'
+	]);
+
+
+	Route::post('/update_tipe_berita/relasi',[
+		'uses' => 'NewsController@postUpdateBeritaRelasi',
+		'as' => 'admin.updateberita_relasi',
+		'prefix'=> 'admin'
+	]);
 });
 
 Route::get('/portalagenda',[
@@ -117,6 +136,7 @@ Route::get('/agenda',[
 Route::resource('publicportalagenda','AnotherAgendaController');
 
 Route::resource('newspage','AnotherNewsController');
+
 
 Route::get('dprd/pimpinan',[
 	'uses' => 'DprdController@getHalamanPimpinan',

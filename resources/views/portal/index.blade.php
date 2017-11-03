@@ -30,7 +30,7 @@
 					      <img src="{{ asset ('foto/la.jpg')}}" >
 					      <div class="carousel-caption">
 					        Chicago
-					      </div>
+					      </div>	
 					    </div>
 
 					     <div class="item">
